@@ -24,12 +24,21 @@ class _FormCalculateState extends State<FormCalculate> {
             children: [
               Text("Form Validation Example"),
               Text("current age "+currentage.toString()),
-              TextFormField(
-                keyboardType: TextInputType.number,
-                controller: inputcontrollerExpectedRetirement,
-                decoration: InputDecoration(
-                  hintText: "input number"
-                ),
+              Row(
+                children: [
+                  Text("makan"),
+                  Container(
+                    margin: EdgeInsets.only(left: 20),
+                    width: MediaQuery.of(context).size.width * 0.65,
+                    child: TextFormField(
+                      keyboardType: TextInputType.number,
+                      controller: inputcontrollerExpectedRetirement,
+                      decoration: InputDecoration(
+                          hintText: "input number"
+                      ),
+                    ),
+                  )
+                ],
               ),
               SizedBox(height: 20,),
               TextFormField(
